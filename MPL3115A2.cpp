@@ -57,8 +57,6 @@ uint8_t MPL3115A2::init(void)
     uint8_t i = 0;
     char reg_val[1];
 
-    _i2c->frequency(100000);
-
     // Reset all registers to POR values
     reg_val[0] = 0x04;
     result = MPL3115A2::writeRegister(CTRL_REG1, reg_val);
